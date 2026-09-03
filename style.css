@@ -1,0 +1,56 @@
+/* style.css - extracted from index.html + modal and responsive rules */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#cdd8ea;min-height:100vh;display:flex;justify-content:center}
+.app{width:100%;max-width:430px;background:#f4f7fb;min-height:100vh;display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,0,0,.15);position:relative}
+.header{background:#0a2a5e;padding:16px 18px 20px;border-radius:0 0 22px 22px;display:flex;justify-content:space-between;align-items:center;color:#d4a017;position:sticky;top:0;z-index:10}
+.logo{font-size:32px;font-weight:900;letter-spacing:1px;display:flex;align-items:center;gap:8px;color:#d4a017}
+.logo i{width:52px;height:52px;background:linear-gradient(135deg,#f7d774,#b78d1a);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;border:2px solid #d4a017;font-style:normal}
+.logo i:after{content:'🌍'}
+.header-controls{display:flex;gap:12px;align-items:center;color:#fff}
+.avatar{background:#fff3;color:#d4a017;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.page{display:none;padding:14px 12px 10px;animation:fade .2s ease}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+h1{color:#0a2a5e;font-size:26px;line-height:1.1;font-weight:900}
+.sub{color:#0a2a5e;font-size:12px;margin:8px 0 10px;line-height:1.4;opacity:.85}
+.badge{background:#f5c84c;color:#000;font-size:10px;padding:7px 10px;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-bottom:16px}
+.classes-title{color:#0a2a5e;font-weight:800;font-size:15px;margin:6px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.card{background:#fff;border:1.5px solid #d7b07a;border-radius:10px;padding:8px 6px 9px;position:relative;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);cursor:pointer;transition:transform .15s ease}
+.card:active{transform:scale(.96)}
+.tag{position:absolute;top:-1px;left:-1px;background:#c18a2b;color:#fff;font-size:10px;font-weight:800;padding:4px 7px;border-radius:9px 0 7px 0}
+.tag.dark{background:#0a2a5e}
+.unlocked-badge{position:absolute;top:6px;right:6px;background:#2e7d32;color:#fff;font-size:10px;padding:4px 7px;border-radius:8px;font-weight:700}
+.icon{font-size:26px;margin:16px 0 5px}
+.card b{color:#0a2a5e;font-size:15px;display:block}
+.card small{color:#0a2a5e;font-size:10px;display:block}
+.price{color:#b07d1f;font-weight:800;font-size:11px;margin-top:5px}
+.cta{margin:18px 6px;background:#e6b44a;color:#0a2a5e;border:0;width:calc(100% - 12px);padding:14px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 12px rgba(230,180,74,.15)}
+.wa{background:#d9e4f3;border-radius:14px;padding:12px;text-align:center;margin:12px 6px}
+.wa .num{color:#b07d1f;font-size:21px;font-weight:900}
+.footer{background:#0a2a5e;color:#e6d8a0;text-align:center;padding:12px;font-size:10px;border-radius:18px 18px 0 0;margin-top:auto}
+/* Page classe */
+.back{color:#fff;text-decoration:none;font-size:22px;background:rgba(255,255,255,.15);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.classe-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.classe-title{color:#0a2a5e;font-size:18px}
+.price-card{background:#fff;border:1.5px solid #e6b44a;border-radius:12px;padding:12px;margin:12px 0;display:flex;justify-content:space-between;align-items:center}
+.btn2{width:100%;background:#e6b44a;border:0;padding:14px;border-radius:12px;font-weight:900;color:#0a2a5e;font-size:16px;margin:10px 0;cursor:pointer}
+.btn2.secondary{background:#fff;border:1px solid #ddd;color:#0a2a5e}
+.matiere{background:#fff;margin:8px 0;border-radius:10px;padding:12px;display:flex;gap:10px;align-items:center;border-left:4px solid #0a2a5e;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.matiere .ic{width:36px;height:36px;background:#fdf0c8;border-radius:8px;display:flex;align-items:center;justify-content:center}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);opacity:0;pointer-events:none;transition:opacity .18s ease;z-index:200}
+.modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.modal-content{background:#fff;padding:18px;border-radius:12px;max-width:360px;width:90%;box-shadow:0 10px 30px rgba(0,0,0,.2);position:relative}
+.modal-close{position:absolute;right:10px;top:8px;border:0;background:transparent;font-size:22px;cursor:pointer}
+.modal-actions{display:flex;gap:8px;margin-top:12px}
+
+/* Responsive tweaks */
+@media (max-width:420px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:22px}
+}
+@media (max-width:320px){
+  .grid{grid-template-columns:repeat(1,1fr)}
+}
