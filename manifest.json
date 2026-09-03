@@ -1,0 +1,25 @@
+{
+  "name": "NESI_Tech - 3e à Tle 100% Offline",
+  "short_name": "NESI_Tech",
+  "description": "Tous les cours 3e, 4e, Seconde, Premiere, Tle - 100% Offline",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a2a5a",
+  "theme_color": "#0a2a5a",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
