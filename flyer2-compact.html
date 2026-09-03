@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NESI_Tech - Flyer Compact</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #cdd8ea; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 10px; }
+    
+    .flyer-compact {
+      width: 100%;
+      max-width: 400px;
+      background: linear-gradient(to right, #0a2a5e, #1a3a7a);
+      border-radius: 15px;
+      padding: 30px 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+    
+    .emoji-large {
+      font-size: 64px;
+      margin-bottom: 15px;
+    }
+    
+    .title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #ffd700;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: #e6d8a0;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .offer-banner {
+      background: #e6b44a;
+      color: #0a2a5e;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    
+    .divider {
+      height: 2px;
+      background: rgba(255,255,255,0.2);
+      margin: 15px 0;
+    }
+    
+    .benefits {
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 15px 0;
+      text-align: left;
+    }
+    
+    .benefit-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
+    }
+    
+    .benefit-line span:first-child {
+      font-size: 16px;
+    }
+    
+    .cta-button {
+      background: #ffd700;
+      color: #0a2a5e;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 15px 0;
+      width: 100%;
+    }
+    
+    .contact-info {
+      background: rgba(255,255,255,0.1);
+      padding: 12px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    
+    .contact-info p {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+    
+    .whatsapp-link {
+      color: #ffd700;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    
+    @media print {
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer-compact">
+    <div class="emoji-large">📚</div>
+    <div class="title">NESÍ_Tech</div>
+    <div class="subtitle">Cours Offline Cameroun</div>
+    
+    <div class="offer-banner">1000F/mois</div>
+    
+    <div class="divider"></div>
+    
+    <div class="benefits">
+      <div class="benefit-line">
+        <span>🌐</span>
+        <span><strong>100% Offline</strong> - Sans internet</span>
+      </div>
+      <div class="benefit-line">
+        <span>✅</span>
+        <span><strong>Officiel</strong> - Programme camerounais</span>
+      </div>
+      <div class="benefit-line">
+        <span>📖</span>
+        <span><strong>PDFs + Corrigés</strong> - 6 matières</span>
+      </div>
+      <div class="benefit-line">
+        <span>🎓</span>
+        <span><strong>3e → Terminale</strong> - 9 classes</span>
+      </div>
+      <div class="benefit-line">
+        <span>♾️</span>
+        <span><strong>Accès illimité</strong> - Une fois acheté</span>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="contact-info">
+      <p>💬 <strong>Contactez-nous sur WhatsApp</strong></p>
+      <p class="whatsapp-link">+237 680 944 328</p>
+      <p style="font-size: 11px; margin-top: 8px;">Support 7j/7 • 8h-18h</p>
+    </div>
+    
+    <button class="cta-button">DÉVERROUILLER MAINTENANT</button>
+    
+    <p style="font-size: 11px; opacity: 0.8; margin-top: 15px;">
+      NESI_Tech © 2024 • Yaoundé, Cameroun
+    </p>
+  </div>
+</body>
+</html>
