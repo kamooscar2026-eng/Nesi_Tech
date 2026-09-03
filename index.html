@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#0a2a5e">
-<title>NESI_Tech - Cours Offline 100% Cameroun</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:'Segoe UI',system-ui,Arial;background:#cdd8ea;min-height:100vh;display:flex;justify-content:center}
-.app{width:100%;max-width:430px;background:#f4f7fb;min-height:100vh;display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,0,0,.15);position:relative}
-.header{background:#0a2a5e;padding:16px 18px 20px;border-radius:0 0 22px 22px;display:flex;justify-content:space-between;align-items:center;color:#d4a017;position:sticky;top:0;z-index:10}
-.logo{font-size:32px;font-weight:900;letter-spacing:1px;display:flex;align-items:center;gap:6px}
-.logo i{width:52px;height:52px;background:linear-gradient(135deg,#f7d774,#b78d1a);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;border:2px solid #d4a017;font-style:normal}
-.logo i:after{content:'🌍'}
-.page{display:none;padding:14px 12px 10px;animation:fade .2s ease}
-.page.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-h1{color:#0a2a5e;font-size:26px;line-height:1.1;font-weight:900}
-.sub{color:#0a2a5e;font-size:12px;margin:8px 0 10px;line-height:1.4;opacity:.85}
-.badge{background:#f5c84c;color:#000;font-size:10px;padding:7px 10px;border-radius:6px;display:flex;align-items:center;gap:6px;font-weight:600;margin-bottom:16px}
-.classes-title{color:#0a2a5e;font-weight:800;font-size:15px;margin:6px 0 12px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.card{background:#fff;border:1.5px solid #d7b07a;border-radius:10px;padding:8px 6px 9px;position:relative;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);cursor:pointer;transition:.15s}
-.card:active{transform:scale(.96)}
-.tag{position:absolute;top:-1px;left:-1px;background:#c18a2b;color:#fff;font-size:10px;font-weight:800;padding:4px 7px;border-radius:9px 0 7px 0}
-.tag.dark{background:#0a2a5e}
-.icon{font-size:26px;margin:16px 0 5px}
-.card b{color:#0a2a5e;font-size:15px;display:block}
-.card small{color:#0a2a5e;font-size:10px}
-.price{color:#b07d1f;font-weight:800;font-size:11px;margin-top:5px}
-.cta{margin:18px 6px;background:#e6b44a;color:#0a2a5e;border:0;width:calc(100% - 12px);padding:14px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 12px rgba(230,180,74,.4)}
-.wa{background:#d9e4f3;border-radius:14px;padding:12px;text-align:center;margin:12px 6px}
-.wa .num{color:#b07d1f;font-size:21px;font-weight:900}
-.footer{background:#0a2a5e;color:#e6d8a0;text-align:center;padding:12px;font-size:10px;border-radius:18px 18px 0 0;margin-top:auto}
-/* Page classe */
-.back{color:#fff;text-decoration:none;font-size:22px;background:rgba(255,255,255,.15);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.price-card{background:#fff;border:1.5px solid #e6b44a;border-radius:12px;padding:12px;margin:12px 0;display:flex;justify-content:space-between}
-.btn2{width:100%;background:#e6b44a;border:0;padding:14px;border-radius:12px;font-weight:900;color:#0a2a5e;font-size:16px;margin:10px 0}
-.matiere{background:#fff;margin:8px 0;border-radius:10px;padding:12px;display:flex;gap:10px;align-items:center;border-left:4px solid #0a2a5e;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.matiere .ic{width:36px;height:36px;background:#fdf0c8;border-radius:8px;display:flex;align-items:center;justify-content:center}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a2a5e" />
+  <title>NESI_Tech - Cours Offline 100% Cameroun</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-<div class="header">
-<div class="logo">NESÍ <i></i></div>
-<div style="display:flex;gap:12px;align-items:center"><span>🔔</span><span style="background:#fff3;color:#d4a017;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center">👤</span></div>
-</div>
+  <div class="app" role="application">
+    <header class="header" role="banner">
+      <div class="logo" aria-label="NESI Tech">NESÍ <i aria-hidden="true"></i></div>
+      <div class="header-controls" aria-hidden="false">
+        <span title="Notifications">🔔</span>
+        <span class="avatar">👤</span>
+      </div>
+    </header>
 
-<!-- PAGE 1: LANDING -->
-<div id="home" class="page active">
-<h1>NESI_Tech - Cours Offline<br>100% sans internet</h1>
-<p class="sub">Apprenez depuis le Cameroun, même sans connexion internet • Programmes officiels du système camerounais</p>
-<div class="badge">⬇️ Contenus conformes au programme • Téléchargés une fois • Accès illimité hors ligne</div>
-<div class="classes-title">Classes disponibles — 9 formations ✨</div>
-<div class="grid" id="grid"></div>
-<button class="cta" onclick="contact('toutes les formations')">Accéder aux cours →</button>
-<div class="wa"><div style="font-weight:700;color:#0a2a5e">🟢 Besoin d'aide ? WhatsApp</div><div class="num">+237 680 944 328</div><small>Support 7j/7 • 8h - 18h</small></div>
-</div>
+    <!-- PAGE 1: LANDING -->
+    <main id="home" class="page active" role="main">
+      <h1>NESI_Tech - Cours Offline<br>100% sans internet</h1>
+      <p class="sub">Apprenez depuis le Cameroun, même sans connexion internet • Programmes officiels du système camerounais</p>
 
-<!-- PAGE 2: DETAIL CLASSE -->
-<div id="classe" class="page">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><a class="back" onclick="show('home')">←</a><b id="classeTitle" style="color:#0a2a5e;font-size:18px"></b></div>
-<div id="classeSub" class="sub"></div>
-<div class="price-card"><div><b id="classeName" style="color:#0a2a5e"></b><br><small>6 matières • PDFs + Corrigés</small></div><div style="color:#b07d1f;font-weight:900">1000F/mois</div></div>
-<button class="btn2" onclick="payerActuelle()">Débloquer maintenant → 1000F</button>
-<div id="matieres"></div>
-<div class="wa"><div style="font-weight:700;color:#0a2a5e">Paiement par MoMo / Orange Money</div><a id="waLink" href="#" style="color:#b07d1f;font-weight:900;font-size:20px;text-decoration:none">+237 680 944 328</a><br><small>Accès instantané après paiement</small></div>
-</div>
+      <div class="badge">⬇️ Contenus conformes au programme • Téléchargés une fois • Accès illimité hors ligne</div>
+      <div class="classes-title">Classes disponibles — 9 formations ✨</div>
 
-<div class="footer">NESI_Tech © 2024 • Yaoundé, Cameroun • 100% Offline</div>
-</div>
+      <div class="grid" id="grid" aria-live="polite"></div>
 
-<script>
-const classes=[
-{id:'3e',nom:'3e Collège',cat:'Collège',icon:'📚',tag:'dark',mat:['Mathématiques 12 chapitres','Physique-Chimie 10 chap','SVT 8 chap','Français Dictées','Anglais Grammar','Histoire-Géo']},
-{id:'1ereA',nom:'1ere A Littéraire',cat:'Littéraire',icon:'📖',tag:'',mat:['Littérature','Langue Française','Anglais','Histoire-Géo','Philosophie','Maths']},
-{id:'1ereC',nom:'1ere C Scientifique',cat:'Scientifique',icon:'⚛️',tag:'',mat:['Maths','Physique','Chimie','SVT','Français','Anglais']},
-{id:'1ereD',nom:'1ere D Scientifique',cat:'Scientifique',icon:'🧪',tag:'',mat:['Maths','Physique','Chimie','SVT','Français','Informatique']},
-{id:'1ereE',nom:'1ere E Technique',cat:'Technique',icon:'⚙️',tag:'',mat:['Maths','Physique','Technologie','Dessin Tech','Français','Anglais']},
-{id:'TleA',nom:'Tle A Littéraire',cat:'Littéraire',icon:'🎓',tag:'',mat:['Littérature','Philosophie','Histoire-Géo','Anglais','Maths Gén','Langue']},
-{id:'TleC',nom:'Tle C Scientifique',cat:'Scientifique',icon:'🔢',tag:'',mat:['Maths Avancées','Physique','Chimie','SVT','Philo','Anglais']},
-{id:'TleD',nom:'Tle D Scientifique',cat:'Scientifique',icon:'🧬',tag:'',mat:['Maths','Physique','Chimie','SVT Bio','Philo','Informatique']},
-{id:'TleE',nom:'Tle E Technique',cat:'Technique',icon:'🛠️',tag:'',mat:['Maths','Physique Appliquée','Construction Meca','Automatisme','Français','Anglais Technique']},
-];
-let actuelle=null;
-const grid=document.getElementById('grid');
-classes.forEach(c=>{
- grid.innerHTML+=`<div class="card" onclick="openClasse('${c.id}')"><span class="tag ${c.tag}">${c.id}</span><div class="icon">${c.icon}</div><b>${c.id.replace('1ere','1ere ')}</b><small>${c.cat}</small><div class="price">1000F/mois ✔</div></div>`;
-});
-function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
-function openClasse(id){
- actuelle=classes.find(x=>x.id===id);
- document.getElementById('classeTitle').textContent=actuelle.nom;
- document.getElementById('classeSub').textContent='Programme officiel '+actuelle.cat+' • Cameroun';
- document.getElementById('classeName').textContent=actuelle.nom;
- document.getElementById('matieres').innerHTML=actuelle.mat.map(m=>`<div class="matiere"><div class="ic">📘</div><div><b>${m.split(' ')[0]}</b><br><small>${m}</small></div></div>`).join('');
- show('classe');
-}
-function contact(txt){const m=`Bonjour NESI_Tech, je veux ${txt} à 1000F/mois`;window.open(`https://wa.me/237680944328?text=${encodeURIComponent(m)}`,'_blank');}
-function payerActuelle(){if(actuelle)contact(actuelle.nom);}
-</script>
+      <button class="cta" id="allCoursesBtn" aria-label="Accéder à toutes les formations">Accéder aux cours →</button>
+
+      <div class="wa" aria-label="Support WhatsApp">
+        <div style="font-weight:700;color:#0a2a5e">🟢 Besoin d'aide ? WhatsApp</div>
+        <div class="num">+237 680 944 328</div>
+        <small>Support 7j/7 • 8h - 18h</small>
+      </div>
+    </main>
+
+    <!-- PAGE 2: DETAIL CLASSE -->
+    <section id="classe" class="page" aria-labelledby="classeTitle" role="region">
+      <div class="classe-header">
+        <button class="back" onclick="show('home')" aria-label="Retour">←</button>
+        <b id="classeTitle" class="classe-title"></b>
+      </div>
+
+      <div id="classeSub" class="sub"></div>
+
+      <div class="price-card">
+        <div><b id="classeName" style="color:#0a2a5e"></b><br><small>6 matières • PDFs + Corrigés</small></div>
+        <div style="color:#b07d1f;font-weight:900">1000F/mois</div>
+      </div>
+
+      <button class="btn2" id="unlockBtn" aria-label="Débloquer la formation">Débloquer maintenant → 1000F</button>
+
+      <div id="matieres"></div>
+
+      <div class="wa">
+        <div style="font-weight:700;color:#0a2a5e">Paiement par MoMo / Orange Money</div>
+        <a id="waLink" href="https://wa.me/237680944328" target="_blank" rel="noopener noreferrer" style="color:#b07d1f;font-weight:900;font-size:20px;text-decoration:none">+237 680 944 328</a>
+      </div>
+
+      <div class="footer">NESI_Tech © 2024 • Yaoundé, Cameroun • 100% Offline</div>
+    </section>
+  </div>
+
+  <!-- PAYMENT MODAL -->
+  <div id="paymentModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fermer la fenêtre">×</button>
+      <h2>Débloquer la formation</h2>
+      <p id="modalClassName" class="sub"></p>
+      <div class="modal-actions">
+        <button id="mockPayBtn" class="btn2">Payer 1000F (Simuler)</button>
+        <button id="modalCancel" class="btn2 secondary">Annuler</button>
+      </div>
+      <small style="display:block;margin-top:10px;opacity:.9">Ceci est une simulation. Aucun paiement réel n'est effectué.</small>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
